@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_transparent" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#00000000" >
+        <Button
+            android:id="@+id/full_log"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="@string/full_log"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:background="@drawable/dialogbuttonshape" />
+        <Button
+            android:id="@+id/man_log"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="@string/man_log"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:background="@drawable/dialogbuttonshape" />
+    </LinearLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/logLV"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00000000" > 
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

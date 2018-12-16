@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:scaleType="fitXY"
+    tools:context="com.example.projectmanagesec.activity.LoginActivity" >
+	
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:text="@string/loginpage"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textColor="@color/aliceblue"
+        android:textSize="@dimen/abc_dropdownitem_icon_width"
+        android:textStyle="bold" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_user"
+            android:textColor="@color/aliceblue"
+            android:textSize="@dimen/activity_vertical_margin" />
+		
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/white" />
+		<ImageView
+		    android:id="@+id/down"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:background="@drawable/arrow32_up" />
+    </LinearLayout>
+	
+	<ListView
+	    android:id="@+id/userlist"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:paddingLeft="30dp"
+	    android:paddingRight="30dp"
+	    android:footerDividersEnabled="true"
+        android:dividerHeight="1dp"
+        android:descendantFocusability="beforeDescendants" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:paddingLeft="0dp"
+            android:text="@string/textView_pwd"
+            android:textColor="@color/aliceblue"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp" >
+		<CheckBox 
+		    android:id="@+id/remeber"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginRight="5dp"
+		    android:text="记住密码"
+		    android:textColor="@color/white" />
+		<CheckBox 
+		    android:id="@+id/autologin"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="自动登录"
+		    android:textColor="@color/white" />
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+    <Button
+        android:id="@+id/login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/button_login"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white"
+        android:alpha="0.8" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_reset"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white"
+        android:alpha="0.8" />
+
+    </LinearLayout>
+</LinearLayout>

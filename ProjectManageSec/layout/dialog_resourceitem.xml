@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_title"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:orientation="horizontal"
+        android:gravity="right" >
+        
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="#00000000"
+            android:src="@drawable/cancel32" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dip"
+        android:background="@drawable/dialog_content"
+        android:orientation="vertical" 
+        android:gravity="center"
+        android:padding="15dip" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kind"
+                android:textStyle="bold" />
+            <Spinner  
+        		android:id="@+id/kindSp"  
+        		android:layout_width="fill_parent" 
+        		android:layout_height="wrap_content"
+        		android:background="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit"
+                android:textStyle="bold" />
+            <Spinner  
+        		android:id="@+id/unitSp"  
+        		android:layout_width="fill_parent" 
+        		android:layout_height="wrap_content"
+        		android:background="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/des"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/des"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:background="@drawable/dialog_bottom"
+        android:orientation="vertical" >
+		
+        <Button
+            android:id="@+id/modify_item"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/modify_item"
+        	android:layout_marginBottom="10dp"
+        	android:textColor="@color/white"
+        	android:background="@drawable/dialogbuttonshape" />
+        
+        <Button
+            android:id="@+id/delete_item"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/delete_item"
+        	android:textColor="@color/white"
+        	android:background="@drawable/dialogbuttonshape" />
+        
+    </LinearLayout>
+
+</LinearLayout>

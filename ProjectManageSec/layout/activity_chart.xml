@@ -1,0 +1,316 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.projectmanagesec.activity.ChartActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg_transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="5dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/analysis"
+            android:textColor="@color/aliceblue"
+            android:textSize="@dimen/abc_action_bar_title_text_size" />
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/arrow32_revers"
+            android:background="#00000000" />
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/group_itemwhite" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center_horizontal"
+        	android:text="成本产值统计图（折线图）"
+        	android:textSize="@dimen/abc_action_bar_title_text_size"
+        	android:textColor="@color/white" />
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp"
+        	android:layout_gravity="left"
+        	android:orientation="vertical" >
+            <LinearLayout 
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal" >
+            	<RelativeLayout
+            	    android:layout_width="16dp"
+        			android:layout_height="16dp"
+        			android:layout_marginRight="5dp"
+        			android:background="@color/red" >
+            	</RelativeLayout>
+            	<TextView
+            	    android:id="@+id/valueunit"
+            		android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:text="总产值/万元"
+        			android:textColor="@color/white" />
+        	</LinearLayout>
+        	<LinearLayout 
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal" >
+            	<RelativeLayout
+            	    android:layout_width="16dp"
+        			android:layout_height="16dp"
+        			android:layout_marginRight="5dp"
+        			android:background="@color/yellow" >
+            	</RelativeLayout>
+            	<TextView
+            	    android:id="@+id/costunit"
+            		android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:text="总成本/万元"
+        			android:textColor="@color/white" />
+        	</LinearLayout>
+        </LinearLayout>
+        
+        <com.example.projectmanagesec.widget.SimpleLineChart
+    		android:id="@+id/simpleLineChart"  
+    		android:layout_width="match_parent"  
+    		android:layout_height="200dp"
+    		android:background="@color/child_itemwhite" /> 
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginBottom="5dp"
+        	android:padding="5dp"
+        	android:gravity="center" >
+            <EditText
+        	android:id="@+id/startdate"
+        	android:layout_width="0dp"
+        	android:layout_weight="2"
+        	android:layout_height="30dp"
+        	android:background="@color/white"
+        	android:layout_marginRight="1dp"
+        	android:hint="@string/chartstartdatehint"
+        	android:textSize="12sp" />
+            <EditText
+        	android:id="@+id/enddate"
+        	android:layout_width="0dp"
+        	android:layout_weight="2"
+        	android:layout_height="30dp"
+        	android:background="@color/white"
+        	android:layout_marginLeft="1dp"
+        	android:hint="@string/chartenddatehint"
+        	android:textSize="12sp" />
+            <Button
+            android:id="@+id/search"
+        	android:layout_width="0dp"
+        	android:layout_weight="1"
+        	android:layout_height="40dp"
+        	android:layout_marginLeft="1dp"
+        	android:text="查询"
+        	android:textColor="@color/white"
+        	android:background="@drawable/dialogbuttonshape"
+        	android:padding="0dp" />
+        </LinearLayout>
+        
+    	<DatePicker
+    	    android:id="@+id/datepicker"
+    	    android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:background="@color/white"
+        	android:paddingLeft="1dp"
+        	android:visibility="gone" />
+    	<ScrollView
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content" >
+    	    <LinearLayout
+    	        android:layout_width="match_parent"
+    	        android:layout_height="wrap_content"
+    	        android:orientation="vertical" >
+    	<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:padding="5dp" >
+    	    <LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="已开工："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/throughday"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="12天"
+        		android:textColor="@color/white" />
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="50dp"
+        		android:text="竣工日期："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/endday"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="2016-8-29"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    		<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="清单产值："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/cleanvalue"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="20000元"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    		<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="取费率："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/cutrate"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="20000元"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    		<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="取费："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/cutvalue"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="20000元"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    		<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="总产值："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/allvalue"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="20000元"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    		<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="总成本："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/allcost"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="10000元"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    		<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="当前利润："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/earn"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="10000元"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    		<LinearLayout
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="当前利润率："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/earnrate"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="50%"
+        		android:textColor="@color/white" />
+    	    <TextView
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="50dp"
+        		android:text="目标利润率 ："
+        		android:textStyle="bold"
+        		android:textColor="@color/white" />
+    	    <TextView
+    	        android:id="@+id/targetearnrate"
+            	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="60%"
+        		android:textColor="@color/white" />
+    		</LinearLayout>
+    	</LinearLayout>
+    	</LinearLayout>
+    	</ScrollView>
+    </LinearLayout>
+</LinearLayout>

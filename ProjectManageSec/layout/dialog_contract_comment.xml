@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/dialog_title"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical" >
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="#00000000"
+            android:src="@drawable/cancel32"
+            android:contentDescription="" />
+        </RelativeLayout>
+		
+         <LinearLayout
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+        	<TextView
+        	    android:id="@+id/contract_fullname_s"
+        	    android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="1"
+        		android:text="@string/contract_fullname"
+        		android:textStyle="bold" />
+        	<TextView
+        	    android:id="@+id/contract_fullname"
+        	    android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="2"
+        		android:text="@string/contract_fullname" />
+    	</LinearLayout>
+    	<LinearLayout
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+        	<TextView
+        	    android:id="@+id/manage_rate_s"
+        	    android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="1"
+        		android:text="@string/manage_rate"
+        		android:textStyle="bold" />
+        	<RatingBar
+                android:id="@+id/manage_rate"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:isIndicator="true"
+                android:numStars="@integer/starnum" />
+    	</LinearLayout>
+    	<LinearLayout
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+        	<TextView
+        	    android:id="@+id/money_rate_s"
+        	    android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="1"
+        		android:text="@string/money_rate"
+        		android:textStyle="bold" />
+        	<RatingBar
+                android:id="@+id/money_rate"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:isIndicator="true"
+                android:numStars="@integer/starnum" />
+    	</LinearLayout>
+    	<LinearLayout
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+        	<TextView
+        	    android:id="@+id/tech_rate_s"
+        	    android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="1"
+        		android:text="@string/tech_rate"
+        		android:textStyle="bold" />
+        	<RatingBar
+                android:id="@+id/tech_rate"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:isIndicator="true"
+                android:numStars="@integer/starnum" />
+    	</LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:minHeight="100dip"
+        android:background="@drawable/dialog_content"
+        android:orientation="vertical" 
+        android:gravity="center"
+        android:padding="5dip" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/contract_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:footerDividersEnabled="true"
+        	android:paddingLeft="5dp"
+       		android:divider="@drawable/black_list_item_divider"
+        	android:dividerHeight="1dp" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:minHeight="50dp"
+        android:padding="5dip"
+        android:background="@drawable/dialog_bottom"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/rate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialogbuttonshape"
+            android:layout_marginBottom="5dp"
+            android:text="@string/rate"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/use"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialogbuttonshape"
+            android:text="@string/use"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

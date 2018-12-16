@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#00000000" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center_vertical" >  
+
+	<TextView
+        android:id="@+id/totaldate_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="日期："
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+	<TextView
+        android:id="@+id/totaldate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="日期："
+        android:textColor="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center_vertical" >  
+
+	<TextView
+        android:id="@+id/totaltext_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总产值："
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+	<TextView
+        android:id="@+id/totaltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总产值："
+        android:textColor="@color/white" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center_vertical" >  
+
+	<TextView
+        android:id="@+id/totalcosttext_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总成本："
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+	<TextView
+        android:id="@+id/totalcosttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总成本："
+        android:textColor="@color/white" />
+    </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/deleteLL"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center" >
+    	<Button
+    	    android:id="@+id/details"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="40dp"
+    	    android:background="@drawable/valuationbuttonshape"
+    	    android:text="详情"
+    	    android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

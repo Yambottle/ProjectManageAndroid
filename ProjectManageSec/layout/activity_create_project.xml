@@ -1,0 +1,238 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_transparent"
+    tools:context="com.example.projectmanagesec.activity.CreateProjectActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="5dp" >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/create_project"
+            android:textColor="@color/aliceblue"
+            android:textSize="@dimen/abc_action_bar_title_text_size" />
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/arrow32_revers"
+            android:background="#00000000" />
+		<Button
+            android:id="@+id/save"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/save"
+            android:textColor="@color/aliceblue"
+            android:background="#00000000" />
+    </RelativeLayout>
+
+    <FrameLayout 
+        android:id="@+id/mapparent"
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+		
+    	<com.baidu.mapapi.map.MapView
+        	android:id="@+id/bmapView"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:clickable="true" >
+		</com.baidu.mapapi.map.MapView>
+		
+    	<RelativeLayout
+    	    android:id="@+id/whiteWall"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent"
+    	    android:background="@color/gainsboro"
+    	    android:alpha="0.6"
+    	    android:visibility="visible" >
+    	    
+    	</RelativeLayout>
+    	
+    	<LinearLayout
+    	    android:id="@+id/editparent"
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="top"
+        	android:orientation="vertical"
+        	android:padding="5dp"
+        	android:background="@color/downbarblue" >
+    	<EditText
+        	android:id="@+id/proname"
+        	android:layout_width="match_parent"
+        	android:layout_height="30dp"
+        	android:background="@color/white"
+        	android:paddingLeft="5dp"
+        	android:hint="@string/prohint"
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp" />
+    	<EditText
+        	android:id="@+id/profullname"
+        	android:layout_width="match_parent"
+        	android:layout_height="30dp"
+        	android:background="@color/white"
+        	android:paddingLeft="5dp"
+        	android:hint="@string/profullhint"
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp" />
+    	<Spinner  
+        		android:id="@+id/departSp"  
+        		android:layout_width="fill_parent" 
+        		android:layout_height="wrap_content"
+        		android:background="@color/white"
+        		android:layout_marginTop="1dp"
+        		android:layout_marginBottom="1dp" />
+    	<EditText
+        	android:id="@+id/proenddate"
+        	android:layout_width="match_parent"
+        	android:layout_height="30dp"
+        	android:background="@color/white"
+        	android:paddingLeft="5dp"
+        	android:hint="@string/proenddatehint"
+        	android:cursorVisible="false"
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp" />
+    	<DatePicker
+    	    android:id="@+id/proenddatepicker"
+    	    android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:background="@color/white"
+        	android:paddingLeft="5dp"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginBottom="5dp"
+        	android:visibility="gone" />
+    	<LinearLayout
+    	    android:layout_width="match_parent"
+        	android:layout_height="30dp"
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp"
+        	android:orientation="horizontal"
+        	android:gravity="center_vertical" >
+    	    <EditText
+        	android:id="@+id/prorate"
+        	android:layout_width="0dp"
+        	android:layout_height="match_parent"
+        	android:layout_weight="4"
+        	android:background="@color/white"
+        	android:paddingLeft="5dp"
+        	android:hint="@string/proratehint"/>
+    	    <TextView
+    	    android:layout_width="0dp"
+        	android:layout_height="match_parent"
+        	android:layout_weight="1"
+        	android:textColor="@color/white"
+        	android:text="%"
+        	android:textSize="18sp"
+        	android:gravity="center"/>
+    	</LinearLayout>
+    	<LinearLayout
+    	    android:layout_width="match_parent"
+        	android:layout_height="30dp"
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp"
+        	android:orientation="horizontal"
+        	android:gravity="center_vertical" >
+    	    <EditText
+        	android:id="@+id/procutrate"
+        	android:layout_width="0dp"
+        	android:layout_height="match_parent"
+        	android:layout_weight="4"
+        	android:background="@color/white"
+        	android:paddingLeft="5dp"
+        	android:hint="请输入取费率"/>
+    	    <TextView
+    	    android:layout_width="0dp"
+        	android:layout_height="match_parent"
+        	android:layout_weight="1"
+        	android:textColor="@color/white"
+        	android:text="%"
+        	android:textSize="18sp"
+        	android:gravity="center"/>
+    	</LinearLayout>
+    	<EditText
+        	android:id="@+id/prodes"
+        	android:layout_width="match_parent"
+        	android:layout_height="30dp"
+        	android:background="@color/white"
+        	android:paddingLeft="5dp"
+        	android:hint="@string/prodeshint"
+        	android:layout_marginTop="1dp"
+        	android:layout_marginBottom="1dp" />
+    	<Button
+    	    android:id="@+id/firststep"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="right"
+        	android:text="@string/nextstep"
+        	android:textColor="@color/white"
+        	android:background="#102140" />
+    	</LinearLayout>
+    	
+    	<LinearLayout 
+    	    android:id="@+id/buttongroup"
+    	    android:layout_height="wrap_content"
+    	    android:layout_width="wrap_content"
+    	    android:orientation="vertical"
+    	    android:layout_gravity="bottom|center_horizontal"
+    	    android:layout_marginBottom="10dp"
+    	    android:visibility="gone" >
+    	<LinearLayout
+    	    android:layout_height="wrap_content"
+    	    android:layout_width="fill_parent"
+    	    android:orientation="horizontal"
+    	    android:gravity="center_vertical"
+    	    android:layout_marginBottom="5dp" >
+    	    <TextView
+    	        android:id="@+id/linewidth"
+    	        android:layout_height="wrap_content"
+    	    	android:layout_width="wrap_content"
+    	    	android:layout_marginRight="5dp"
+    	    	android:text="宽度：10" />
+    	    <SeekBar
+    	        android:id="@+id/widthbar"
+    	        android:layout_height="wrap_content"
+    	    	android:layout_width="fill_parent"
+    	    	android:max="25" />
+    	</LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+    	    android:layout_width="wrap_content"
+    	    android:orientation="horizontal" >
+            <ImageButton
+        	android:id="@+id/draw"
+        	android:layout_width="70dp"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/paintbrush72"
+            android:background="#FF607080"
+            android:alpha="0.8" />
+        
+    		<ImageButton
+        	android:id="@+id/reset"
+        	android:layout_width="70dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="15dp"
+        	android:layout_marginRight="15dp"
+        	android:src="@drawable/undo72"
+            android:background="#FF607080"
+            android:alpha="0.8" />
+
+    		<ImageButton
+        	android:id="@+id/clear"
+        	android:layout_width="70dp"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/cross72"
+            android:background="#FF607080"
+            android:alpha="0.8" />
+        </LinearLayout>
+    	</LinearLayout>
+	</FrameLayout>
+    
+</LinearLayout>
